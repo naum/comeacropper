@@ -1,5 +1,15 @@
 
+a:link, a:visited { 
+  color: #DD9475;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
 body {
+  color: #000000;
   font-family: "American Typewriter", fantasy;
   font-size: 133.333%;
   line-height: 1.333em;

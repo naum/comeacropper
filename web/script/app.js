@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  $('#discoveryboard').text('Report data goes in here...');
+  $('#discoveryboard').html('<a href="#">Report</a> data goes in here...');
 });
