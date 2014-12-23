@@ -1,3 +1,12 @@
+article, aside, blockquote, body, div, dd, dl, dt, fieldset, figure, footer, form, html, label, legend, ol, p, section, table, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
 a:link, a:visited { 
   color: #DD9475;
@@ -17,11 +26,94 @@ body {
   max-width: 30em;
 }
 
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+  width: 100%;
+}
+
 h1, h2 {
   text-align: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 #discoveryboard {
   font-family: monotype;
   font-size: 0.75em;
+  margin-top: 3em;
 }
+
+.alpha {
+  padding-right: 0.75em;
+}
+
+.clear
+  clear: both;
+}
+
+.col16 {
+  float: left;
+  width: 16.666666%;
+}
+
+.col25 {
+  float: left;
+  width: 25%;
+}
+
+.col33 {
+  float: left;
+  width: 33.333333%;
+}
+
+.col42 {
+  float: left;
+  width: 41.666666%;
+}
+
+.col50 {
+  float: left;
+  width: 50%;
+}
+
+.col58 {
+  float: left;
+  width: 58.333333%;
+}
+
+.col66 {
+  float: left;
+  width: 66.666666%;
+}
+
+.col75 {
+  float: left;
+  width: 75%;
+}
+
+.col83 {
+  float: left;
+  width: 83.333333%;
+}
+
+.munu {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.omega {
+  padding-left: 0.75em;
+}
+
+.row {
+  width: 100%;
+}
+
