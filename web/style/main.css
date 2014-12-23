@@ -42,8 +42,45 @@ html {
   box-sizing: inherit;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 0.0625em solid #BFBFBF;
+}
+
+tr:first-child {
+  border-top: 0.125em solid #BFBFBF;
+}
+
+tr:last-child {
+  border-bottom: 0.125em solid #BFBFBF;
+}
+
 #discoveryboard {
   font-family: monotype;
   font-size: 0.75em;
   margin-top: 1.77em;
+}
+
+#tagreport {
+  margin-top: 1.777em;
+}
+
+#tagreport td, tagreport th {
+  padding-top: 0.166666em;
+  padding-bottom: 0.166666em;
+}
+
+#tagreport td + td, #tagreport th + th {
+  padding-left: 0.75em;
 }
