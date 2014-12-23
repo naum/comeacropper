@@ -1,6 +1,12 @@
+var CALLBACKLIT = '?callback=?';
+var TUMBLRAPISUFFIX = '/api/read/json';
+
 $(document).ready(function() {
-  $.getJSON('http://azspot.net/api/read/json/?callback=?', function(d) {
-    console.log(d);
-    $('#discoveryboard').text(d['posts-total']);    
+  $('#fetchtumblr').click(function() {
+    var tumblrUrl = $('#tumblrurl').val();
+    var fetchUrl = 'http://' + tumblrUrl + TUMBLRAPISUFFIX + CALLBACKLIT;
+    $.getJSON(fetchUrl, function(d) {
+      $('#discoveryboard').text(d['posts-total']);    
+    });
   });
 });
