@@ -67,7 +67,7 @@ tr:last-child {
 }
 
 #discoveryboard {
-  font-family: monotype;
+  font-family: monospace;
   font-size: 0.75em;
   margin-top: 1.77em;
 }
@@ -83,4 +83,12 @@ tr:last-child {
 
 #tagreport td + td, #tagreport th + th {
   padding-left: 0.75em;
+}
+
+.cell-l {
+  text-align: left;
+}
+
+.cell-r {
+  text-align: right;
 }
