@@ -10,7 +10,7 @@ var TDM = {
 
   CALLBACKLIT: '?callback=?',
   FETCHCOUNT: 50,
-  MAXPOSTFETCH: 1000,
+  MAXPOSTFETCH: 200,
   TUMBLRAPISUFFIX: '/api/read/json',
 
   fetchUrl: '',
@@ -24,6 +24,7 @@ var TDM = {
     this.tagchart = {};
     this.postcount = 0;
     this.tagcount = 0;
+    $('#discoveryboard').empty();
   },
 
   next: function(startNum) {
