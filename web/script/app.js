@@ -10,7 +10,7 @@ var TDM = {
 
   CALLBACKLIT: '?callback=?',
   FETCHCOUNT: 50,
-  MAXPOSTFETCH: 200,
+  MAXPOSTFETCH: 1000,
   TUMBLRAPISUFFIX: '/api/read/json',
 
   fetchUrl: '',
