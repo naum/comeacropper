@@ -1,0 +1,75 @@
+a:link, a:visited { 
+  color: #DD9475;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+body {
+  color: #000000;
+  font-family: "American Typewriter", fantasy;
+  font-size: 133.333%;
+  line-height: 1.333em;
+  margin: 0 auto;
+  max-width: 30em;
+}
+
+button, input {
+  border-radius: 0.25em;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+button {
+  border-radius: 0.25em;
+  cursor: pointer;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+button:hover, button:active {
+  opacity: 0.75;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 0.0625em solid #BFBFBF;
+}
+
+tr:first-child {
+  border-top: 0.125em solid #BFBFBF;
+}
+
+tr:last-child {
+  border-bottom: 0.125em solid #BFBFBF;
+}
+
+.cell-l {
+  text-align: left;
+}
+
+.cell-r {
+  text-align: right;
+}
