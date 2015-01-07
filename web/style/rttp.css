@@ -24,6 +24,7 @@ button, input {
 }
 
 button {
+  background-color: #E6AF98;
   border-radius: 0.25em;
   cursor: pointer;
   padding-left: 0.75em;
@@ -40,6 +41,10 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+input {
+  background-color: #FCF5F2;
 }
 
 table {
@@ -64,6 +69,26 @@ tr:first-child {
 
 tr:last-child {
   border-bottom: 0.125em solid #BFBFBF;
+}
+
+#rttp-message {
+  background-color: #F6E4DC;
+  margin: 1.33em auto;
+  padding: 0.33em;
+}
+
+#rttp-report {
+  margin: 1.33em auto;
+}
+
+#rttp-report li {
+  margin-bottom: 0.33em;
+}
+
+#rttp-textbox textarea {
+  font-family: monospace;
+  margin: 1.33em auto;
+  width: 100%;
 }
 
 .cell-l {

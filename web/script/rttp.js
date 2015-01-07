@@ -5,6 +5,7 @@ var RTTP = function() {
     fetchTumblrPosts, init, generateReport, 
     setupEventHandlers;
   fetchTumblrPosts = function() {
+    $('#rttp-report,#rttp-textbox,#rttp-report').empty();
     var tumblrUrl = $('#tumblrurl').val();
     var fetchUrl = tumblrUrl + APISUFFIX;
     if (! fetchUrl.match('/^http/')) {
@@ -47,7 +48,6 @@ var RTTP = function() {
     });
   };
   init = function() {
-    $('#rttp-textbox').empty();
     setupEventHandlers();
   };
   return {
