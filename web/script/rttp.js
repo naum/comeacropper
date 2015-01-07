@@ -1,17 +1,10 @@
 
-var HM = function() { 
-  var ro = {};
-  ro.BRNL = '<br>\n';
-  ro.a = function(u, l) {
-    return '<a href="' + u + '">' + l + '</a>';
-  };
-  return ro;
-}();
-
 var RTTP = function() {
-  var ro = {};
-  var APISUFFIX = '/api/read/json/?&callback=?';
-  var fetchTumblrPosts = function() {
+  var 
+    APISUFFIX = '/api/read/json/?&callback=?',
+    fetchTumblrPosts, init, generateReport, 
+    setupEventHandlers;
+  fetchTumblrPosts = function() {
     var tumblrUrl = $('#tumblrurl').val();
     var fetchUrl = tumblrUrl + APISUFFIX;
     if (! fetchUrl.match('/^http/')) {
@@ -29,7 +22,7 @@ var RTTP = function() {
       $('#rttp-message').html('Request failed: ' + error + BRNL);
     });
   };
-  var generateReport = function(d) {
+  generateReport = function(d) {
     console.log(d);
     var reportLines = [];
     var postCount = d.posts.length;
@@ -37,22 +30,28 @@ var RTTP = function() {
       var p = d.posts[i];
       reportLines.push(HM.a(p['url-with-slug'], p['regular-title']));
     }
-    var reportOut = reportLines.join(HM.BRNL);
+    var reportLines = $.map(reportLines, function(s) {
+      return HM.tag('li', s);
+    });
+    var reportOut = reportLines.join('\n');
     $('#rttp-report').html(reportOut);
+    var tbopt = {
+      'rows': 12,
+      'cols': 60
+    };
+    $('#rttp-textbox').append(HM.tag('textarea', reportOut, tbopt));
   };
-  var setupEventHandlers = function() {
+  setupEventHandlers = function() {
     $('#fetchtumblr').click(function() {
       fetchTumblrPosts();
     });
   };
-  ro.init = function() {
+  init = function() {
+    $('#rttp-textbox').empty();
     setupEventHandlers();
   };
-  return ro;
+  return {
+    init: init
+  }
 }();
 
-// MAIN
-
-$(document).ready(function() {
-  RTTP.init();
-});
